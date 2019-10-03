@@ -5,6 +5,7 @@ ruby "2.6.2"
 
 gem "bootstrap", "~> 4.3.1"
 gem "devise"
+gem "devise-bootstrap-views", "~> 1.0"
 gem "haml"
 gem "haml-rails"
 gem "jquery-rails"
