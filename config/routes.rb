@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   get "pages/about"
   get "pages/contact"
   get "pages/projects"
+  get "my_portfolio", to: "users#my_portfolio"
 end
