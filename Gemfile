@@ -9,6 +9,7 @@ gem "devise-bootstrap-views", "~> 1.0"
 gem "font-awesome-rails"
 gem "haml"
 gem "haml-rails"
+gem "iex-ruby-client"
 gem "jquery-easing-rails"
 gem "jquery-rails"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -54,6 +55,7 @@ group :development, :test do
   gem "better_errors"
   gem "binding_of_caller"
   gem "byebug", platforms: %i[mri mingw x64_mingw]
+  gem "dotenv-rails"
   gem "rspec-rails"
   gem "rubocop"
 end
