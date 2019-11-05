@@ -3,7 +3,7 @@
     %h1 My Portfolio
 
     %h3 Search for Stock
-    = form_tag url: "#", method: :get, id: "stock-lookup-form" do
+    = form_tag search_stocks_path, remote: true, method: :get, id: "stock-lookup-form" do
       .form-group.row.no-padding.text-center.col-md-12
         .col-md-8
           = text_field_tag :stock, params[:stock], placeholder: "Your stock ticker symbol",
@@ -12,3 +12,6 @@
           = button_tag(type: :submit, class: "btn btn-primary") do
             %i.fa.fa-search
             Look up a Stock
+
+    #results
+      = render "result"
