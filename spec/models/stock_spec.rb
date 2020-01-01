@@ -16,4 +16,9 @@ describe Stock, type: :model do
     it { should have_attribute(:name) }
     it { should have_attribute(:last_price) }
   end
+
+  describe "associations" do
+    it { should have_many :users }
+    it { should have_many :user_stocks }
+  end
 end

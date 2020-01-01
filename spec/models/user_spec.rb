@@ -18,4 +18,8 @@
 #
 
 describe User, type: :model do
+  describe "associations" do
+    it { should have_many :stocks }
+    it { should have_many :user_stocks }
+  end
 end
