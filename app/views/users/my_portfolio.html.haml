@@ -1,8 +1,8 @@
 %section.projects-section
   .container
-    %h1 My Portfolio
+    %h1= t("portfolio.headline")
 
-    %h3 Search for Stock
+    %h3= t("portfolio.search_headline")
     = form_tag search_stocks_path, remote: true, method: :get, id: "stock-lookup-form" do
       .form-group.row.no-padding.text-center.col-md-12
         .col-md-8

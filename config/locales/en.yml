@@ -7,6 +7,9 @@ en:
     search_empty: "You have entered an empty search"
     search_incorrect_symbol: "You have entered an incorrect symbol"
     user_stock_added: "Successfully added '%{stock_ticker}' to portfolio"
+  portfolio:
+    headline: "My Portfolio"
+    search_headline: "Search for Stock"
   stocks:
     notice: "'%{stock}' was already added to portfolio"
     limit_exceeded: "You exceeded the limit of stocks (10) addable to your portfolio"
