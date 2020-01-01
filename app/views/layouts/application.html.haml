@@ -20,9 +20,9 @@
     = render "shared/header"
 
     - if notice
-      %p#notice.container.back.alert.alert-primary{role: "alert"}= notice
+      #notice.alert.alert-primary{role: "alert"}= notice
     - if alert
-      %p#alert.container.back.alert.alert-danger{role: "alert"}= alert
+      #alert.alert.alert-danger{role: "alert"}= alert
 
     = yield
 
