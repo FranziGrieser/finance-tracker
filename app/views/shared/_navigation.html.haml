@@ -8,6 +8,8 @@
     #navbarResponsive.collapse.navbar-collapse
       %ul.navbar-nav.ml-auto
         %li.nav-item
+          = link_to "my portfolio", my_portfolio_path, class: "nav-link js-scroll-trigger"
+        %li.nav-item
           = link_to "about", pages_about_path, class: "nav-link js-scroll-trigger"
         %li.nav-item
           = link_to "contact", pages_contact_path, class: "nav-link js-scroll-trigger"
