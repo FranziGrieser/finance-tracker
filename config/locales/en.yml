@@ -1,8 +1,14 @@
 en:
-  welcome: "Welcome to the Finance Tracker App"
-  title: "Finance Tracker"
   intro: "Find the latest stock information you need and follow up throughout using
     this incredible app!"
-  search:
-    empty: "You have entered an empty search"
-    incorrect_symbol: "You have entered an incorrect symbol"
+  links:
+    add_stock: "Add to my portfolio"
+  flash:
+    search_empty: "You have entered an empty search"
+    search_incorrect_symbol: "You have entered an incorrect symbol"
+    user_stock_added: "Successfully added '%{stock_ticker}' to portfolio"
+  stocks:
+    notice: "'%{stock}' was already added to portfolio"
+    limit_exceeded: "You exceeded the limit of stocks (10) addable to your portfolio"
+  title: "Finance Tracker"
+  welcome: "Welcome to the Finance Tracker App"

@@ -1,8 +1,9 @@
-.well.results-block
-  - if notice
-    #notice.alert.alert-primary.alert-dismissible{role: "alert"}= notice
-  - if alert
-    #alert.alert.alert-danger.alert-dismissible{role: "alert"}= alert
+- if params[:action] == "search"
+  .results-block
+    - if notice
+      #notice.alert.alert-primary.alert-dismissible{role: "alert"}= notice
+    - if alert
+      #alert.alert.alert-danger.alert-dismissible{role: "alert"}= alert
 
 - if @stock
   .well.results-block
@@ -12,3 +13,12 @@
     = @stock.name
     %strong Price:
     = @stock.last_price
+    - if current_user.can_add_stock?(@stock.ticker)
+      = link_to t("links.add_stock"), user_stocks_path(user: current_user, stock_ticker: @stock.ticker),
+        class: "btn btn-sm btn-success", method: :post
+    - else
+      %span.badge.badge-secondary
+        - if !current_user.under_stock_limit?
+          = t("stocks.limit_exceeded")
+        - if current_user.stock_already_added(@stock.ticker)
+          = t("stocks.notice", stock: @stock.name)
