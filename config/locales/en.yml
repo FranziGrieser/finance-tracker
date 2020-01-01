@@ -3,3 +3,6 @@ en:
   title: "Finance Tracker"
   intro: "Find the latest stock information you need and follow up throughout using
     this incredible app!"
+  search:
+    empty: "You have entered an empty search"
+    incorrect_symbol: "You have entered an incorrect symbol"
