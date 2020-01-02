@@ -16,4 +16,5 @@
     #results
       = render "result"
 
-    = render "stocks/list"
+    - if @user_stocks.any?
+      = render "stocks/list"
