@@ -1,0 +1,21 @@
+%h2.pt-2= t("stocks.list.headline")
+
+%table.table
+  %thead
+    %tr
+      %th= t("stocks.list.header.symbol")
+      %th= t("stocks.list.header.name")
+      %th= t("stocks.list.header.price")
+      - if @user.id == current_user.id
+        %th Actions
+    - @user_stocks.each do |stock|
+      %tr
+        %td= stock.ticker
+        %td= stock.name
+        %td= stock.last_price
+        %td
+          - if @user.id == current_user.id
+            = link_to t("links.remove_stock"), user_stock_path(stock),
+              method: :delete,
+              data: { confirm: t("stocks.actions.remove_confirm") },
+              class: "btn btn-sm btn-danger"

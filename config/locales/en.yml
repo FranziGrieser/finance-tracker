@@ -3,15 +3,25 @@ en:
     this incredible app!"
   links:
     add_stock: "Add to my portfolio"
+    remove_stock: "Remove this stock"
   flash:
     search_empty: "You have entered an empty search"
     search_incorrect_symbol: "You have entered an incorrect symbol"
     user_stock_added: "Successfully added '%{stock_ticker}' to portfolio"
+    user_stock_deleted: "Stock was successfully removed from portfolio"
   portfolio:
     headline: "My Portfolio"
     search_headline: "Search for Stock"
   stocks:
-    notice: "'%{stock}' was already added to portfolio"
-    limit_exceeded: "You exceeded the limit of stocks (10) addable to your portfolio"
+    actions:
+      remove_confirm: "Are you sure you want to remove this stock from your list?"
+    limit_exceeded: "You exceeded the limit of stocks (10) addable to your portfolio."
+    list:
+      headline: "Your Stocks"
+      header:
+        name: "Name"
+        price: "Price"
+        symbol: "Symbol"
+    notice: "'%{stock}' was already added to portfolio."
   title: "Finance Tracker"
   welcome: "Welcome to the Finance Tracker App"
