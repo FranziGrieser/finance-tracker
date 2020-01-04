@@ -1,3 +1,26 @@
 %section#my_friends.projects-section
   .container
     %h1= t("friends.headline")
+
+    = render "friends/lookup"
+
+    - if @friendships.any?
+      %table.table
+        %thead
+          %tr
+            %th= t("friends.list.header.full_name")
+            %th= t("friends.list.header.email")
+            %th= t("friends.list.header.actions")
+          - @friendships.each do |friend|
+            %tr
+              %td= friend.full_name
+              %td= friend.email
+              %td
+                = link_to t("friends.links.view_profile"), user_path(friend),
+                  class: "btn btn-sm btn-primary"
+                = link_to t("friends.links.remove_friend"), friendship_path(friend),
+                  method: :delete,
+                  data: { confirm: t("friends.actions.remove_confirm") },
+                  class: "btn btn-sm btn-danger"
+    - else
+      %p= t("friends.no_friends")

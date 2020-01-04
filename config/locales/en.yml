@@ -10,7 +10,18 @@ en:
     user_stock_added: "Successfully added '%{stock_ticker}' to portfolio"
     user_stock_deleted: "Stock was successfully removed from portfolio"
   friends:
+    actions:
+      remove_confirm: "Are you sure you want to remove this friend?"
     headline: "My Friends"
+    links:
+      remove_friend: "Remove friend"
+      view_profile: "View profile"
+    list:
+      header:
+        full_name: "Name"
+        email: "E-Mail"
+        actions: "Actions"
+    no_friends: "No friends just yet. Look for friends now!"
   portfolio:
     headline: "My Portfolio"
     search_headline: "Search for Stock"
