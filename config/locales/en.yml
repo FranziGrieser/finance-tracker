@@ -9,6 +9,8 @@ en:
     search_incorrect_symbol: "You have entered an incorrect symbol"
     user_stock_added: "Successfully added '%{stock_ticker}' to portfolio"
     user_stock_deleted: "Stock was successfully removed from portfolio"
+  friends:
+    headline: "My Friends"
   portfolio:
     headline: "My Portfolio"
     search_headline: "Search for Stock"
