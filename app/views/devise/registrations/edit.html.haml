@@ -1,4 +1,4 @@
-%section#signup.signup-section
+%section#edit_profile.signup-section
   .container
     .row
       .col-md-10.col-lg-8.mx-auto.text-center
@@ -7,12 +7,18 @@
         = form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f|
           = bootstrap_devise_error_messages!
           .form-group
-            = f.label :email
+            = f.label :email, t(".email")
             = f.email_field :email, autofocus: true, autocomplete: 'email', class: 'form-control'
+          .form-group
+            = f.label :first_name, t(".first_name")
+            = f.text_field :first_name, class: 'form-control'
+          .form-group
+            = f.label :last_name, t(".last_name")
+            = f.text_field :last_name, class: 'form-control'
           .form-group
             = f.label :password
             = f.password_field :password, autocomplete: 'new-password', class: 'form-control'
-            %small.form-text.text-muted= t('.leave_blank_if_you_don_t_want_to_change_it')
+            %small.form-text= t('.leave_blank_if_you_don_t_want_to_change_it')
           .form-group
             = f.label :password_confirmation
             = f.password_field :password_confirmation, autocomplete: 'new-password', class: 'form-control'
@@ -24,5 +30,5 @@
             = f.submit t('.update'), class: 'btn btn-primary'
         %p
           = t('.unhappy')
-          ? #{link_to t('.cancel_my_account'), registration_path(resource_name), data: { confirm: t('.are_you_sure') }, method: :delete}.
-        = link_to t('.back'), :back
+          #{link_to t('.cancel_my_account'), registration_path(resource_name), data: { confirm: t('.are_you_sure') }, method: :delete, class: 'btn btn-primary btn-sm'}.
+        = link_to t('.back'), :back, class: 'btn btn-primary btn-sm'

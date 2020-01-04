@@ -102,6 +102,9 @@ en:
         update: Update
         we_need_your_current_password_to_confirm_your_changes: we need your current password to confirm your changes
       new:
+        email: E-Mail
+        first_name: First Name
+        last_name: Last Name
         sign_up: Sign up
       signed_up: Welcome! You have signed up successfully.
       signed_up_but_inactive: You have signed up successfully. However, we could not sign you in because your account is not yet activated.
