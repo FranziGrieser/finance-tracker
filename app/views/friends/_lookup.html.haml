@@ -1,0 +1,10 @@
+%h3= t("friends.search_headline")
+= form_tag search_friends_path, remote: true, method: :get, id: "friend-lookup-form" do
+  .form-group.row.no-padding.text-center.col-md-12
+    .col-md-8
+      = text_field_tag :search_param, params[:search_param], placeholder: t("friends.placeholder.name_email"),
+                               autofocus: true, class: "form-control search-box input-lg"
+    .col-md-4
+      = button_tag(type: :submit, class: "btn btn-primary") do
+        %i.fa.fa-search
+        = t("friends.button.search")
