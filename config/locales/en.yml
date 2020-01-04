@@ -12,6 +12,8 @@ en:
   friends:
     actions:
       remove_confirm: "Are you sure you want to remove this friend?"
+    button:
+      search: "Search"
     headline: "My Friends"
     links:
       remove_friend: "Remove friend"
@@ -22,8 +24,15 @@ en:
         email: "E-Mail"
         actions: "Actions"
     no_friends: "No friends just yet. Look for friends now!"
+    placeholder:
+      name_email: "Enter Name or E-Mail"
+    search_headline: "Search for friends"
   portfolio:
+    button:
+      search: "Look up a Stock"
     headline: "My Portfolio"
+    placeholder:
+      ticker_symbol: "Your stock ticker symbol"
     search_headline: "Search for Stock"
   stocks:
     actions:
