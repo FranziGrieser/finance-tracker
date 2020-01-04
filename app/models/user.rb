@@ -10,6 +10,8 @@
 #  remember_created_at    :datetime
 #  created_at             :datetime         not null
 #  updated_at             :datetime         not null
+#  first_name             :string
+#  last_name              :string
 #
 # Indexes
 #
@@ -25,6 +27,12 @@ class User < ApplicationRecord
 
   has_many :user_stocks
   has_many :stocks, through: :user_stocks
+
+  def full_name
+    return "#{first_name} #{last_name}".strip if first_name || last_name
+
+    "anonymous"
+  end
 
   def can_add_stock?(ticker_symbol)
     under_stock_limit? && !stock_already_added(ticker_symbol)
