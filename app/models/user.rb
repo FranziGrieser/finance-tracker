@@ -43,7 +43,6 @@ class User < ApplicationRecord
 
   def self.search(param)
     param.strip!
-    param.downcase!
 
     to_send_back =
       (
@@ -68,8 +67,16 @@ class User < ApplicationRecord
     matches("email", param)
   end
 
-  def matches(field_name, param)
-    User.where("#{field_name} like ?", "%#{param}%")
+  def self.matches(field_name, param)
+    where("#{field_name} LIKE ?", "%#{param}%")
+  end
+
+  def except_current_user(users)
+    users.reject { |user| user.id == id }
+  end
+
+  def not_friends_with?(id_of_friend)
+    !friends.where(id: id_of_friend).exists?
   end
 
   def stock_already_added(ticker_symbol)
