@@ -5,18 +5,24 @@ en:
     add_stock: "Add to my portfolio"
     remove_stock: "Remove this stock"
   flash:
+    friendship_created: "Successfully started following"
+    friendship_create_error: "Something went wrong with your follow request"
+    friendship_deleted: "Successfully stopped following"
     search_empty: "You have entered an empty search"
     search_incorrect_symbol: "You have entered an incorrect symbol"
+    user_not_found: "Couldn't find user"
+    user_search_empty: "Please enter a name or email to search for a friend"
     user_stock_added: "Successfully added '%{stock_ticker}' to portfolio"
     user_stock_deleted: "Stock was successfully removed from portfolio"
   friends:
     actions:
-      remove_confirm: "Are you sure you want to remove this friend?"
+      remove_confirm: "Are you sure you want to stop following this friend?"
     button:
       search: "Search"
     headline: "My Friends"
     links:
-      remove_friend: "Remove friend"
+      follow_friend: "Follow friend?"
+      remove_friend: "stop following"
       view_profile: "View profile"
     list:
       header:
