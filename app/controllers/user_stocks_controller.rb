@@ -9,7 +9,7 @@ class UserStocksController < ApplicationController
     end
     @user_stock = UserStock.create(user: current_user, stock: stock)
     flash[:notice] =
-      I18n.t("flash.user_stock_added", stock_ticker: @user_stock.stock.name)
+      t("flash.user_stock_added", stock_ticker: @user_stock.stock.name)
     redirect_to my_portfolio_path
   end
 
@@ -19,7 +19,7 @@ class UserStocksController < ApplicationController
       UserStock.where(user_id: current_user.id, stock_id: stock.id).first
     @user_stock.destroy
     flash[:notice] =
-      I18n.t("flash.user_stock_deleted")
+      t("flash.user_stock_deleted")
     redirect_to my_portfolio_path
   end
 end
