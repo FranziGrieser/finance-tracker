@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   devise_for :users, controllers: { registrations: "user/registrations" }
   resources :user_stocks, only: %i[create destroy]
   resources :users, only: %i[show]
-  resources :friendships
+  resources :friendships, only: %i[create destroy]
 
   root "welcome#index"
   get "pages/about"
