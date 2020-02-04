@@ -1,0 +1,29 @@
+%section#my_portfolio.projects-section
+  .container
+    %h1= t("users.headline", user_name: @user.first_name)
+
+    .card.mb-2
+      .card-body
+        %strong Name:
+        = @user.full_name
+        %strong E-mail:
+        = @user.email
+        %strong Actions:
+        - if current_user.not_friends_with?(@user.id)
+          = link_to t("friends.links.follow_friend"), friendships_path(friend: @user),
+            class: "btn btn-sm btn-success", method: :post
+        - else
+          %span.badge.badge-secondary You are friends
+          = link_to t("friends.links.remove_friend"), friendship_path(@user),
+            method: :delete,
+            data: { confirm: t("friends.actions.remove_confirm") },
+            class: "btn btn-sm btn-danger"
+
+
+    - if @user.stocks.any?
+      %h3.pt-2= t("users.stocks.headline", user_name: @user.first_name)
+      = render "stocks/list"
+    - else
+      %p
+        = @user.first_name
+        does not track any stocks just yet
