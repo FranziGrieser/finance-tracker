@@ -17,4 +17,5 @@
       = render "result"
 
     - if @user_stocks.any?
+      %h2.pt-2= t("stocks.list.headline")
       = render "stocks/list"
