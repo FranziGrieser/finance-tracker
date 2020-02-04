@@ -52,4 +52,8 @@ en:
         symbol: "Symbol"
     notice: "'%{stock}' was already added to portfolio."
   title: "Finance Tracker"
+  users:
+    headline: "%{user_name}'s Profile"
+    stocks:
+      headline: "%{user_name}'s Stock Tracking List"
   welcome: "Welcome to the Finance Tracker App"
