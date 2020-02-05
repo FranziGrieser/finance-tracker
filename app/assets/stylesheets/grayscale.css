@@ -93,7 +93,7 @@
   background: linear-gradient(to bottom, rgba(22, 22, 22, 0.3) 0%, rgba(22, 22, 22, 0.7) 75%, #161616 100%), url("bg-masthead.jpg");
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: scroll;
+  background-attachment: fixed;
   background-size: cover;
 }
 
@@ -121,7 +121,7 @@
 
 @media (min-width: 992px) {
   .masthead {
-    height: 100vh;
+    height: auto;
     padding: 0;
   }
   .masthead h1 {
