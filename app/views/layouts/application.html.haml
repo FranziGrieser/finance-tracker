@@ -17,14 +17,14 @@
 
   %body#page-top
     = render "shared/navigation"
-    = render "shared/header"
 
-    - if notice
-      #notice.alert.alert-primary{role: "alert"}= notice
-    - if alert
-      #alert.alert.alert-danger{role: "alert"}= alert
+    .masthead
+      - if notice
+        #notice.alert.alert-primary{role: "alert"}= notice
+      - if alert
+        #alert.alert.alert-danger{role: "alert"}= alert
 
-    = yield
+      = yield
 
     = render "shared/footer"
 

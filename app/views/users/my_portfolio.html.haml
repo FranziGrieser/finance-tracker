@@ -1,4 +1,4 @@
-%section#my_portfolio.projects-section
+%section#my_portfolio.text-primary.head-pt
   .container
     %h1= t("portfolio.headline")
 
@@ -13,7 +13,7 @@
             %i.fa.fa-search
             = t("portfolio.button.search")
 
-    #results
+    #results.text-secondary
       = render "result"
 
     - if @user_stocks.any?
